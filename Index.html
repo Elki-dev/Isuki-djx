@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xmlns" xml:lang="fr" lang="fr">
+<head>
+    <title>Angel</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript" src="annyang.js"></script>
+    <script type="text/javascript" src="commands.js"></script>
+    <script type="text/python" src="RN.py"></script>
+</head>
+<body>
+    <script type="text/javascript">
+    if (annyang) {
+        annyang.setLanguage('fr-Fr');
+        annyang.addCommands(commands);
+        annyang.start({autoRestart: true});
+        annyang.debug([newState=true])
+        
+        //création de l'objet message avec le texte de votre choix
+var message = new SpeechSynthesisUtterance("wesh la street");
+//on paramètre la langue
+message.lang = 'fr-FR';
+//on lance la lecture du message
+window.speechSynthesis.speak(message);
+    }
+
+    </script>
+        <h1>Angel I.A </h1>
+</body>
+</html>
